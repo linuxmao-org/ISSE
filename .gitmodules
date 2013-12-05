@@ -1,0 +1,9 @@
+[submodule "sdks/juce"]
+	path = sdks/juce
+	url = git://github.com/julianstorer/JUCE.git
+[submodule "sdks/eigen"]
+	path = sdks/eigen
+	url = git://github.com/RLovelett/eigen.git
+[submodule "extras"]
+	path = extras
+	url = ssh://isseapp@git.code.sf.net/p/isse/extra-code

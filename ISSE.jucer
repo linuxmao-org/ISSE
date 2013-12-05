@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="XJHdcg" name="ISSE" projectType="guiapp" version="0.2.0"
+              bundleIdentifier="edu.stanford.ccrma" jucerVersion="3.1.0" defines=""
+              includeBinaryInAppConfig="1">
+  <MAINGROUP id="Rq24qA" name="ISSE">
+    <GROUP id="{ECFC0A27-437A-C3C4-008C-C8826F5E2DA5}" name="Source">
+      <GROUP id="{3E894A75-E950-5051-A474-9E7CAEAE0833}" name="Separation Core">
+        <FILE id="pZJsYS" name="SeparationEngine.h" compile="0" resource="0"
+              file="src/SeparationEngine.h"/>
+        <FILE id="ROdD9r" name="SeparationEngine.cpp" compile="1" resource="0"
+              file="src/SeparationEngine.cpp"/>
+        <FILE id="HUxw6q" name="ISSEngine.cpp" compile="1" resource="0" file="src/api/ISSEngine.cpp"/>
+        <FILE id="pHtjZi" name="ISSEngine.h" compile="0" resource="0" file="src/api/ISSEngine.h"/>
+        <FILE id="Vd79Ll" name="PluginComponent.h" compile="0" resource="0"
+              file="src/PluginComponent.h"/>
+        <FILE id="UCTq5W" name="PluginComponent.cpp" compile="1" resource="0"
+              file="src/PluginComponent.cpp"/>
+        <FILE id="aN4XSe" name="AudioFormatReaderLoopSource.h" compile="0"
+              resource="0" file="src/AudioFormatReaderLoopSource.h"/>
+        <FILE id="FRAvfp" name="AudioFormatReaderLoopSource.cpp" compile="1"
+              resource="0" file="src/AudioFormatReaderLoopSource.cpp"/>
+        <FILE id="ok9s9e" name="AudioSink.h" compile="0" resource="0" file="src/AudioSink.h"/>
+        <FILE id="wVFZcV" name="AudioSink.cpp" compile="1" resource="0" file="src/AudioSink.cpp"/>
+        <FILE id="iATsFh" name="AudioSource.h" compile="0" resource="0" file="src/AudioSource.h"/>
+        <FILE id="wd4ESA" name="AudioSource.cpp" compile="1" resource="0" file="src/AudioSource.cpp"/>
+        <FILE id="f5NcXv" name="EnergyEnvelope.h" compile="0" resource="0"
+              file="src/EnergyEnvelope.h"/>
+        <FILE id="DUCnCK" name="EnergyEnvelope.cpp" compile="1" resource="0"
+              file="src/EnergyEnvelope.cpp"/>
+        <FILE id="IncSvM" name="PluginThread.h" compile="0" resource="0" file="src/PluginThread.h"/>
+        <FILE id="PaZQMY" name="PluginThread.cpp" compile="1" resource="0"
+              file="src/PluginThread.cpp"/>
+        <GROUP id="{C69947E6-0E03-F844-958A-79736643E8B6}" name="api">
+          <FILE id="oLa0fn" name="ISSPluginBase.h" compile="0" resource="0" file="src/api/ISSPluginBase.h"/>
+          <FILE id="sXKLGg" name="ISSDefs.h" compile="0" resource="0" file="src/api/ISSDefs.h"/>
+          <FILE id="Ub4XCU" name="ISSFft.cpp" compile="1" resource="0" file="src/api/ISSFft.cpp"/>
+          <FILE id="QHVoU2" name="ISSFft.h" compile="0" resource="0" file="src/api/ISSFft.h"/>
+          <FILE id="fYxqpX" name="ISSMask.h" compile="0" resource="0" file="src/api/ISSMask.h"/>
+          <FILE id="oQzpSV" name="ISSRandom.h" compile="0" resource="0" file="src/api/ISSRandom.h"/>
+          <FILE id="rTZszj" name="ISSSink.h" compile="0" resource="0" file="src/api/ISSSink.h"/>
+          <FILE id="lizRBb" name="ISSSource.h" compile="0" resource="0" file="src/api/ISSSource.h"/>
+          <FILE id="FYfxs9" name="ISSStft.cpp" compile="1" resource="0" file="src/api/ISSStft.cpp"/>
+          <FILE id="focMKv" name="ISSStft.h" compile="0" resource="0" file="src/api/ISSStft.h"/>
+          <FILE id="A6vzUV" name="Window.h" compile="0" resource="0" file="src/api/Window.h"/>
+        </GROUP>
+      </GROUP>
+      <GROUP id="{DE5166EE-8B7F-D248-B095-219F6AF8E7F3}" name="Virtual Users">
+        <FILE id="XuEpzx" name="VirtualTestUser.h" compile="0" resource="0"
+              file="src/VirtualTestUser.h"/>
+        <FILE id="mjrnTg" name="VirtualTestUser.cpp" compile="1" resource="0"
+              file="src/VirtualTestUser.cpp"/>
+        <FILE id="YJpJUD" name="VirtualUser.h" compile="0" resource="0" file="src/VirtualUser.h"/>
+        <FILE id="rLZG4g" name="VirtualUser.cpp" compile="1" resource="0" file="src/VirtualUser.cpp"/>
+      </GROUP>
+      <GROUP id="{5E8AF7E8-FC96-2517-8BF2-001CF3B4BF56}" name="Plugin Support">
+        <FILE id="bc22N2" name="FilterGraph.h" compile="0" resource="0" file="src/plugin/FilterGraph.h"/>
+        <FILE id="mLDdJ1" name="FilterGraph.cpp" compile="1" resource="0" file="src/plugin/FilterGraph.cpp"/>
+        <FILE id="s1G827" name="GraphEditorPanel.h" compile="0" resource="0"
+              file="src/plugin/GraphEditorPanel.h"/>
+        <FILE id="BtQ90e" name="GraphEditorPanel.cpp" compile="1" resource="0"
+              file="src/plugin/GraphEditorPanel.cpp"/>
+        <FILE id="M6iJ7W" name="MainHostWindow.h" compile="0" resource="0"
+              file="src/plugin/MainHostWindow.h"/>
+        <FILE id="fJ3cSX" name="MainHostWindow.cpp" compile="1" resource="0"
+              file="src/plugin/MainHostWindow.cpp"/>
+        <FILE id="kuTRwx" name="PluginListWindow.h" compile="0" resource="0"
+              file="src/plugin/PluginListWindow.h"/>
+        <FILE id="wRGE5S" name="PluginListWindow.cpp" compile="1" resource="0"
+              file="src/plugin/PluginListWindow.cpp"/>
+        <FILE id="vjWoIX" name="FilePlayerProcessor.h" compile="0" resource="0"
+              file="src/FilePlayerProcessor.h"/>
+        <FILE id="mtoy95" name="FilePlayerProcessor.cpp" compile="1" resource="0"
+              file="src/FilePlayerProcessor.cpp"/>
+      </GROUP>
+      <GROUP id="{F5F21976-62A0-A0CB-C29F-C245353889DB}" name="Layer">
+        <FILE id="E38iTG" name="Layer.h" compile="0" resource="0" file="src/Layer.h"/>
+        <FILE id="lgYl98" name="Layer.cpp" compile="1" resource="0" file="src/Layer.cpp"/>
+        <FILE id="NzpNZd" name="ImageLayer.h" compile="0" resource="0" file="src/ImageLayer.h"/>
+        <FILE id="LKhb0F" name="ImageLayer.cpp" compile="1" resource="0" file="src/ImageLayer.cpp"/>
+        <FILE id="fLMaSJ" name="VizRenderThread.h" compile="0" resource="0"
+              file="src/VizRenderThread.h"/>
+        <FILE id="wtMEx7" name="VizRenderThread.cpp" compile="1" resource="0"
+              file="src/VizRenderThread.cpp"/>
+        <FILE id="xu0d04" name="MaskLayer.h" compile="0" resource="0" file="src/MaskLayer.h"/>
+        <FILE id="nZmAN1" name="MaskLayer.cpp" compile="1" resource="0" file="src/MaskLayer.cpp"/>
+        <GROUP id="{21D2BC15-2F15-A063-7114-57B52CCDEAFA}" name="Actions">
+          <FILE id="Vn86nU" name="TrainingSelectionAction.h" compile="0" resource="0"
+                file="src/TrainingSelectionAction.h"/>
+          <FILE id="Xz6KFw" name="TrainingSelectionAction.cpp" compile="1" resource="0"
+                file="src/TrainingSelectionAction.cpp"/>
+          <FILE id="URqF9c" name="AddToMaskAction.h" compile="0" resource="0"
+                file="src/AddToMaskAction.h"/>
+          <FILE id="k3E6TZ" name="AddToMaskAction.cpp" compile="1" resource="0"
+                file="src/AddToMaskAction.cpp"/>
+          <FILE id="IV4kzI" name="ClearMaskAction.h" compile="0" resource="0"
+                file="src/ClearMaskAction.h"/>
+          <FILE id="NjTxZ3" name="ClearMaskAction.cpp" compile="1" resource="0"
+                file="src/ClearMaskAction.cpp"/>
+          <FILE id="ZtCjI8" name="BoxBrushImgAction.h" compile="0" resource="0"
+                file="src/BoxBrushImgAction.h"/>
+          <FILE id="dGUQoY" name="BoxBrushImgAction.cpp" compile="1" resource="0"
+                file="src/BoxBrushImgAction.cpp"/>
+          <FILE id="Pmus3q" name="ClearImageAction.h" compile="0" resource="0"
+                file="src/ClearImageAction.h"/>
+          <FILE id="dJXs8J" name="ClearImageAction.cpp" compile="1" resource="0"
+                file="src/ClearImageAction.cpp"/>
+          <FILE id="eyQWZT" name="PaintBrushImgAction.h" compile="0" resource="0"
+                file="src/PaintBrushImgAction.h"/>
+          <FILE id="z3VMvN" name="PaintBrushImgAction.cpp" compile="1" resource="0"
+                file="src/PaintBrushImgAction.cpp"/>
+        </GROUP>
+      </GROUP>
+      <GROUP id="{9954C7A9-2EDE-D7ED-A4C0-BDABDEE71A1E}" name="Widgets">
+        <FILE id="X9hcjM" name="ColorMap.h" compile="0" resource="0" file="src/ColorMap.h"/>
+        <FILE id="eddWSy" name="ColorMap.cpp" compile="1" resource="0" file="src/ColorMap.cpp"/>
+        <FILE id="XcFVsd" name="SpectrogramSettings.h" compile="0" resource="0"
+              file="src/SpectrogramSettings.h"/>
+        <FILE id="n67PDy" name="SpectrogramSettings.cpp" compile="1" resource="0"
+              file="src/SpectrogramSettings.cpp"/>
+        <FILE id="aYasuI" name="Timeline.h" compile="0" resource="0" file="src/Timeline.h"/>
+        <FILE id="oc5FaO" name="Timeline.cpp" compile="1" resource="0" file="src/Timeline.cpp"/>
+        <FILE id="LftM0C" name="TransportComp.h" compile="0" resource="0" file="src/TransportComp.h"/>
+        <FILE id="yhosvq" name="TransportComp.cpp" compile="1" resource="0"
+              file="src/TransportComp.cpp"/>
+        <FILE id="d2B44Q" name="MainToolbar.h" compile="0" resource="0" file="src/MainToolbar.h"/>
+        <FILE id="Y7JRBb" name="MainToolbar.cpp" compile="1" resource="0" file="src/MainToolbar.cpp"/>
+        <FILE id="wdgXZL" name="ToolbarProgress.h" compile="0" resource="0"
+              file="src/ToolbarProgress.h"/>
+        <FILE id="MHl3oV" name="ToolbarProgress.cpp" compile="1" resource="0"
+              file="src/ToolbarProgress.cpp"/>
+        <FILE id="wI4YDe" name="BrushPanel.h" compile="0" resource="0" file="src/BrushPanel.h"/>
+        <FILE id="sP2uFd" name="BrushPanel.cpp" compile="1" resource="0" file="src/BrushPanel.cpp"/>
+        <FILE id="s6XfeF" name="AboutPage.h" compile="0" resource="0" file="src/AboutPage.h"/>
+        <FILE id="bIkDf6" name="AboutPage.cpp" compile="1" resource="0" file="src/AboutPage.cpp"/>
+        <FILE id="yCTHzm" name="Cursor.h" compile="0" resource="0" file="src/Cursor.h"/>
+        <FILE id="ACuYyP" name="ImgBinaryData.h" compile="0" resource="0" file="src/ImgBinaryData.h"/>
+        <FILE id="lcG5G1" name="ImgBinaryData.cpp" compile="1" resource="0"
+              file="src/ImgBinaryData.cpp"/>
+        <FILE id="KsCLb5" name="ImgToolbarButton.h" compile="0" resource="0"
+              file="src/ImgToolbarButton.h"/>
+        <FILE id="dLEobc" name="ImgToolbarButton.cpp" compile="1" resource="0"
+              file="src/ImgToolbarButton.cpp"/>
+        <FILE id="Yk1fEr" name="ToolbarItemFact.h" compile="0" resource="0"
+              file="src/ToolbarItemFact.h"/>
+        <FILE id="uLPOmu" name="ToolbarItemFact.cpp" compile="1" resource="0"
+              file="src/ToolbarItemFact.cpp"/>
+        <FILE id="aLwr0V" name="ToolbarSlider.h" compile="0" resource="0" file="src/ToolbarSlider.h"/>
+        <FILE id="fD7h7p" name="ToolbarSlider.cpp" compile="1" resource="0"
+              file="src/ToolbarSlider.cpp"/>
+      </GROUP>
+      <FILE id="iBzdAj" name="AppCommandIDs.h" compile="0" resource="0" file="src/AppCommandIDs.h"/>
+      <FILE id="s3DvYv" name="AppCommandIDs.cpp" compile="1" resource="0"
+            file="src/AppCommandIDs.cpp"/>
+      <FILE id="UOZvvi" name="Main.h" compile="0" resource="0" file="src/Main.h"/>
+      <FILE id="hiCgDm" name="Main.cpp" compile="1" resource="0" file="src/Main.cpp"/>
+      <FILE id="cEyebx" name="DocWindow.h" compile="0" resource="0" file="src/DocWindow.h"/>
+      <FILE id="p7yfmx" name="DocWindow.cpp" compile="1" resource="0" file="src/DocWindow.cpp"/>
+      <FILE id="LEscM3" name="TimelineView.h" compile="0" resource="0" file="src/TimelineView.h"/>
+      <FILE id="cAsErI" name="TimelineView.cpp" compile="1" resource="0"
+            file="src/TimelineView.cpp"/>
+      <FILE id="UGSx7w" name="JuceHeader.h" compile="0" resource="0" file="src/JuceHeader.h"/>
+      <FILE id="ts3Cwi" name="MainContentComp.h" compile="0" resource="0"
+            file="src/MainContentComp.h"/>
+      <FILE id="vMjwFB" name="MainContentComp.cpp" compile="1" resource="0"
+            file="src/MainContentComp.cpp"/>
+      <FILE id="sdhUpi" name="Track.h" compile="0" resource="0" file="src/Track.h"/>
+      <FILE id="H7cBhf" name="Track.cpp" compile="1" resource="0" file="src/Track.cpp"/>
+      <FILE id="eNOmMP" name="MultiTrack.h" compile="0" resource="0" file="src/MultiTrack.h"/>
+      <FILE id="wbT8Py" name="MultiTrack.cpp" compile="1" resource="0" file="src/MultiTrack.cpp"/>
+      <FILE id="rcx3ta" name="MultiPaintView.h" compile="0" resource="0"
+            file="src/MultiPaintView.h"/>
+      <FILE id="onXaCo" name="MultiPaintView.cpp" compile="1" resource="0"
+            file="src/MultiPaintView.cpp"/>
+      <FILE id="BRZw3U" name="ProgramSettings.h" compile="0" resource="0"
+            file="src/ProgramSettings.h"/>
+      <FILE id="NCc25i" name="ProgramSettings.cpp" compile="1" resource="0"
+            file="src/ProgramSettings.cpp"/>
+      <FILE id="x3s8HL" name="ThreadHelpers.h" compile="0" resource="0" file="src/ThreadHelpers.h"/>
+      <FILE id="QiID1H" name="ThreadHelpers.cpp" compile="1" resource="0"
+            file="src/ThreadHelpers.cpp"/>
+      <FILE id="r3IRqA" name="ToolbarState.h" compile="0" resource="0" file="src/ToolbarState.h"/>
+      <FILE id="SIdkMz" name="ToolbarState.cpp" compile="1" resource="0"
+            file="src/ToolbarState.cpp"/>
+      <FILE id="cMqWFZ" name="XMLSerializable.h" compile="0" resource="0"
+            file="src/XMLSerializable.h"/>
+      <FILE id="C0Rpuo" name="NewProjectMenu.h" compile="0" resource="0"
+            file="src/NewProjectMenu.h"/>
+      <FILE id="kXyS1s" name="NewProjectMenu.cpp" compile="1" resource="0"
+            file="src/NewProjectMenu.cpp"/>
+      <FILE id="qRxgpz" name="ISSLogger.h" compile="0" resource="0" file="src/ISSLogger.h"/>
+      <FILE id="DyJOMo" name="ISSLogger.cpp" compile="1" resource="0" file="src/ISSLogger.cpp"/>
+    </GROUP>
+    <GROUP id="{36AB99DA-8255-AF7E-7B1A-5391BF323D13}" name="Resources">
+      <FILE id="IiuHuR" name="FileIcon.icns" compile="0" resource="1" file="src/FileIcon.icns"/>
+      <FILE id="m0exBb" name="ISSE-Icon.png" compile="0" resource="1" file="src/ISSE-Icon.png"/>
+      <FILE id="AiBc0G" name="about.txt" compile="0" resource="1" file="src/about.txt"/>
+      <FILE id="oTWq7v" name="COPYING" compile="0" resource="1" file="COPYING"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_gui_audio" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="0" useLocalCopy="0"/>
+  </MODULES>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="extras/builds/MacOSX" extraLinkerFlags="-lpthread&#10;-headerpad_max_install_names&#10;/usr/local/lib/libfftw3f.a"
+               extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__MACOSX_CORE__&#10;"
+               userNotes="" extraCompilerFlags="-fopenmp&#10;-I../../../sdks/eigen/&#10;-I/usr/local/include/"
+               postbuildCommand="$PROJECT_DIR/../../../src/post-build-osx.sh"
+               smallIcon="qYkELb" bigIcon="qYkELb" extraFrameworks="CoreAudioKit, AudioUnit"
+               prebuildCommand="" customPList="&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;&#10;&lt;plist&gt;&#10;&lt;dict&gt;&#10;&lt;key&gt;CFBundleDocumentTypes&lt;/key&gt;&#10;&#9;&lt;array&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;isse&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;FileIcon.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeMIMETypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;application/isse-project&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;ISSE Project&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;LSIsAppleDefaultForType&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;true/&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wav&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wave&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;FileIcon.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeMIMETypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;audio/wav&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;audio/x-wav&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;WAV Audio File&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;WAV &lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wav &lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;WAVE&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wave&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&lt;/array&gt;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
+               documentExtensions="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="64BitUniversal"
+                       isDebug="1" optimisation="1" targetName="ISSE" cppLibType="libc++"
+                       defines="" libraryPath="" headerPath="" userNotes=""/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="64BitUniversal"
+                       isDebug="0" optimisation="3" targetName="ISSE" defines="" cppLibType="libc++"
+                       headerPath="" libraryPath="" userNotes=""/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="extras/builds/Linux-Static" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
+                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../../sdks/eigen/"
+                extraLinkerFlags="-lpthread&#10;-lgomp&#10;/usr/lib64/libfftw3f.a&#10;"
+                smallIcon="qYkELb" bigIcon="qYkELb" userNotes="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
+                       headerPath="" linuxArchitecture="" userNotes=""/>
+        <CONFIGURATION name="Release" libraryPath="" isDebug="0" optimisation="3" targetName="ISSE"
+                       headerPath="" linuxArchitecture="" userNotes=""/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <LINUX_MAKE targetFolder="builds/Linux" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
+                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/"
+                extraLinkerFlags="-lpthread&#10;-lfftw3f&#10;-lgomp" smallIcon="qYkELb"
+                bigIcon="qYkELb">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
+                       linuxArchitecture=""/>
+        <CONFIGURATION name="Release" libraryPath="" isDebug="0" optimisation="3" targetName="ISSE"
+                       linuxArchitecture=""/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <VS2012 targetFolder="extras/builds/VisualStudio2012-32" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__"
+            extraCompilerFlags="-I../../../sdks/eigen/&#10;-openmp" externalLibraries="libfftw3-3.lib&#10;libfftw3f-3.lib&#10;"
+            smallIcon="qYkELb" bigIcon="qYkELb" userNotes="" toolset="v110_xp"
+            extraLinkerFlags="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug-32" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="ISSE" libraryPath="../../../extras/sdks/fftw/fftw-32"
+                       postbuildCommand="..\..\..\src\post-build-win.bat" wholeProgramOptimisation="1"
+                       headerPath="../../../extras/sdks/fftw/fftw-32"/>
+        <CONFIGURATION name="Release-32" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="ISSE" libraryPath="../../../extras/sdks/fftw/fftw-32"
+                       postbuildCommand="..\..\..\src\post-build-win.bat" wholeProgramOptimisation="1"
+                       headerPath="../../../extras/sdks/fftw/fftw-32"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </VS2012>
+    <VS2012 targetFolder="extras/builds/VisualStudio2012-64" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__&#10;"
+            extraCompilerFlags="-I../../../sdks/eigen/&#10;-openmp" externalLibraries="libfftw3-3.lib&#10;libfftw3f-3.lib&#10;"
+            smallIcon="qYkELb" bigIcon="qYkELb" toolset="v110_xp" userNotes="">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug-64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="1" optimisation="1" targetName="ISSE" headerPath="../../../extras/SDKs/fftw/fftw-64&#10;"
+                       libraryPath="../../../extras/SDKs/fftw/fftw-64&#10;" wholeProgramOptimisation="1"
+                       postbuildCommand="..\..\..\src\post-build-win-64.bat" userNotes=""/>
+        <CONFIGURATION name="Release-64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       isDebug="0" optimisation="3" targetName="ISSE" headerPath="../../../extras/SDKs/fftw/fftw-64&#10;"
+                       libraryPath="../../../extras/SDKs/fftw/fftw-64&#10;" wholeProgramOptimisation="1"
+                       postbuildCommand="..\..\..\src\post-build-win-64.bat" userNotes=""/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </VS2012>
+    <XCODE_IPHONE targetFolder="extras/builds/iOS" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__IOS_CORE__&#10;__KISS_FFT__"
+                  extraCompilerFlags="-fopenmp&#10;-I../../../SDKs/eigen/" extraLinkerFlags="-lpthread&#10;-headerpad_max_install_names&#10;/usr/local/lib/libfftw3f.a"
+                  smallIcon="qYkELb" bigIcon="qYkELb" UIStatusBarHidden="1" UIFileSharingEnabled="1"
+                  customPList="&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;&#10;&lt;plist&gt;&#10;&lt;dict&gt;&#10;&lt;key&gt;CFBundleDocumentTypes&lt;/key&gt;&#10;&#9;&lt;array&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;isse&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;FileIcon.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeMIMETypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;application/isse-project&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;ISSE Project&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;LSIsAppleDefaultForType&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;true/&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wav&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wave&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;FileIcon.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeMIMETypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;audio/wav&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;audio/x-wav&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;WAV Audio File&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;WAV &lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wav &lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;WAVE&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;wave&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&lt;/array&gt;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" iosCompatibility="default" isDebug="1" optimisation="1"
+                       targetName="ISSE" cppLibType="libc++"/>
+        <CONFIGURATION name="Release" iosCompatibility="default" isDebug="0" optimisation="3"
+                       targetName="ISSE" cppLibType="libc++"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
+        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+  </EXPORTFORMATS>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
