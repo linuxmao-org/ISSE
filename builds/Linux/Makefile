@@ -18,12 +18,12 @@ ifeq ($(CONFIG),Debug)
     TARGET_ARCH := -march=native
   endif
 
-  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
+  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   CFLAGS += $(CPPFLAGS) $(TARGET_ARCH) -g -ggdb -O0 -msse -msse2 -std=c++0x -fopenmp -I../../sdks/eigen/
   CXXFLAGS += $(CFLAGS)
   LDFLAGS += $(TARGET_ARCH) -L$(BINDIR) -L$(LIBDIR) -lX11 -lXext -lXinerama -lasound -ldl -lfreetype -lpthread -lrt -lpthread -lfftw3f -lgomp
   LDDEPS :=
-  RESFLAGS :=  -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
+  RESFLAGS :=  -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   TARGET := ISSE
   BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES) $(TARGET_ARCH)
 endif
@@ -38,12 +38,12 @@ ifeq ($(CONFIG),Release)
     TARGET_ARCH := -march=native
   endif
 
-  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
+  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "NDEBUG=1" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   CFLAGS += $(CPPFLAGS) $(TARGET_ARCH) -O3 -msse -msse2 -std=c++0x -fopenmp -I../../sdks/eigen/
   CXXFLAGS += $(CFLAGS)
   LDFLAGS += $(TARGET_ARCH) -L$(BINDIR) -L$(LIBDIR) -fvisibility=hidden -lX11 -lXext -lXinerama -lasound -ldl -lfreetype -lpthread -lrt -lpthread -lfftw3f -lgomp
   LDDEPS :=
-  RESFLAGS :=  -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
+  RESFLAGS :=  -D "LINUX=1" -D "NDEBUG=1" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   TARGET := ISSE
   BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES) $(TARGET_ARCH)
 endif
