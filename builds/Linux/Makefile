@@ -18,12 +18,12 @@ ifeq ($(CONFIG),Debug)
     TARGET_ARCH := -march=native
   endif
 
-  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../SDKs/juce/modules
+  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   CFLAGS += $(CPPFLAGS) $(TARGET_ARCH) -g -ggdb -O0 -msse -msse2 -std=c++0x -fopenmp -I../../sdks/eigen/
   CXXFLAGS += $(CFLAGS)
   LDFLAGS += $(TARGET_ARCH) -L$(BINDIR) -L$(LIBDIR) -lX11 -lXext -lXinerama -lasound -ldl -lfreetype -lpthread -lrt -lpthread -lfftw3f -lgomp
   LDDEPS :=
-  RESFLAGS :=  -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../SDKs/juce/modules
+  RESFLAGS :=  -D "LINUX=1" -D "DEBUG=1" -D "_DEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   TARGET := ISSE
   BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES) $(TARGET_ARCH)
 endif
@@ -38,12 +38,12 @@ ifeq ($(CONFIG),Release)
     TARGET_ARCH := -march=native
   endif
 
-  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../SDKs/juce/modules
+  CPPFLAGS := $(DEPFLAGS) -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   CFLAGS += $(CPPFLAGS) $(TARGET_ARCH) -O3 -msse -msse2 -std=c++0x -fopenmp -I../../sdks/eigen/
   CXXFLAGS += $(CFLAGS)
   LDFLAGS += $(TARGET_ARCH) -L$(BINDIR) -L$(LIBDIR) -fvisibility=hidden -lX11 -lXext -lXinerama -lasound -ldl -lfreetype -lpthread -lrt -lpthread -lfftw3f -lgomp
   LDDEPS :=
-  RESFLAGS :=  -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../SDKs/juce/modules
+  RESFLAGS :=  -D "LINUX=1" -D "NDEBUG=1" -D "JUCE_PLUGINHOST_AU" -D "__SEPARATION_FLOAT_PRECISION__" -D "__UNIX__" -D "JUCER_LINUX_MAKE_697B860A=1" -I /usr/include -I /usr/include/freetype2 -I ../../JuceLibraryCode -I ../../sdks/juce/modules
   TARGET := ISSE
   BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES) $(TARGET_ARCH)
 endif
@@ -102,17 +102,17 @@ OBJECTS := \
   $(OBJDIR)/NewProjectMenu_c8dd4d8.o \
   $(OBJDIR)/ISSLogger_c0dcc303.o \
   $(OBJDIR)/BinaryData_ce4232d4.o \
-  $(OBJDIR)/juce_audio_basics_31e05c92.o \
-  $(OBJDIR)/juce_audio_devices_c0e6d4d0.o \
-  $(OBJDIR)/juce_audio_formats_ef681e70.o \
-  $(OBJDIR)/juce_audio_processors_81c0844a.o \
-  $(OBJDIR)/juce_audio_utils_a25490.o \
-  $(OBJDIR)/juce_core_4884974.o \
-  $(OBJDIR)/juce_data_structures_1e55ee30.o \
-  $(OBJDIR)/juce_events_a930dbe8.o \
-  $(OBJDIR)/juce_graphics_7bb5874c.o \
-  $(OBJDIR)/juce_gui_basics_94c68c8.o \
-  $(OBJDIR)/juce_gui_extra_87c22c50.o \
+  $(OBJDIR)/juce_audio_basics_35b680b2.o \
+  $(OBJDIR)/juce_audio_devices_27c470f0.o \
+  $(OBJDIR)/juce_audio_formats_5645ba90.o \
+  $(OBJDIR)/juce_audio_processors_77c0886a.o \
+  $(OBJDIR)/juce_audio_utils_15f300b0.o \
+  $(OBJDIR)/juce_core_9c6aad94.o \
+  $(OBJDIR)/juce_data_structures_66c87a50.o \
+  $(OBJDIR)/juce_events_3043008.o \
+  $(OBJDIR)/juce_graphics_5581cb6c.o \
+  $(OBJDIR)/juce_gui_basics_dd199ce8.o \
+  $(OBJDIR)/juce_gui_extra_1f8de870.o \
 
 .PHONY: clean
 
@@ -398,57 +398,57 @@ $(OBJDIR)/BinaryData_ce4232d4.o: ../../JuceLibraryCode/BinaryData.cpp
 	@echo "Compiling BinaryData.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_basics_31e05c92.o: ../../SDKs/juce/modules/juce_audio_basics/juce_audio_basics.cpp
+$(OBJDIR)/juce_audio_basics_35b680b2.o: ../../sdks/juce/modules/juce_audio_basics/juce_audio_basics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_basics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_devices_c0e6d4d0.o: ../../SDKs/juce/modules/juce_audio_devices/juce_audio_devices.cpp
+$(OBJDIR)/juce_audio_devices_27c470f0.o: ../../sdks/juce/modules/juce_audio_devices/juce_audio_devices.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_devices.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_formats_ef681e70.o: ../../SDKs/juce/modules/juce_audio_formats/juce_audio_formats.cpp
+$(OBJDIR)/juce_audio_formats_5645ba90.o: ../../sdks/juce/modules/juce_audio_formats/juce_audio_formats.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_formats.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_processors_81c0844a.o: ../../SDKs/juce/modules/juce_audio_processors/juce_audio_processors.cpp
+$(OBJDIR)/juce_audio_processors_77c0886a.o: ../../sdks/juce/modules/juce_audio_processors/juce_audio_processors.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_processors.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_audio_utils_a25490.o: ../../SDKs/juce/modules/juce_audio_utils/juce_audio_utils.cpp
+$(OBJDIR)/juce_audio_utils_15f300b0.o: ../../sdks/juce/modules/juce_audio_utils/juce_audio_utils.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_audio_utils.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_core_4884974.o: ../../SDKs/juce/modules/juce_core/juce_core.cpp
+$(OBJDIR)/juce_core_9c6aad94.o: ../../sdks/juce/modules/juce_core/juce_core.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_core.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_data_structures_1e55ee30.o: ../../SDKs/juce/modules/juce_data_structures/juce_data_structures.cpp
+$(OBJDIR)/juce_data_structures_66c87a50.o: ../../sdks/juce/modules/juce_data_structures/juce_data_structures.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_data_structures.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_events_a930dbe8.o: ../../SDKs/juce/modules/juce_events/juce_events.cpp
+$(OBJDIR)/juce_events_3043008.o: ../../sdks/juce/modules/juce_events/juce_events.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_events.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_graphics_7bb5874c.o: ../../SDKs/juce/modules/juce_graphics/juce_graphics.cpp
+$(OBJDIR)/juce_graphics_5581cb6c.o: ../../sdks/juce/modules/juce_graphics/juce_graphics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_graphics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_gui_basics_94c68c8.o: ../../SDKs/juce/modules/juce_gui_basics/juce_gui_basics.cpp
+$(OBJDIR)/juce_gui_basics_dd199ce8.o: ../../sdks/juce/modules/juce_gui_basics/juce_gui_basics.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_gui_basics.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
-$(OBJDIR)/juce_gui_extra_87c22c50.o: ../../SDKs/juce/modules/juce_gui_extra/juce_gui_extra.cpp
+$(OBJDIR)/juce_gui_extra_1f8de870.o: ../../sdks/juce/modules/juce_gui_extra/juce_gui_extra.cpp
 	-@mkdir -p $(OBJDIR)
 	@echo "Compiling juce_gui_extra.cpp"
 	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
