@@ -208,7 +208,7 @@
     <MODULE id="juce_data_structures" showAllCode="0" useLocalCopy="0"/>
     <MODULE id="juce_events" showAllCode="0" useLocalCopy="0"/>
     <MODULE id="juce_graphics" showAllCode="0" useLocalCopy="0"/>
-    <MODULE id="juce_gui_audio" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_audio" showAllCode="0" useLocalCopy="0"/>
     <MODULE id="juce_gui_basics" showAllCode="0" useLocalCopy="0"/>
     <MODULE id="juce_gui_extra" showAllCode="0" useLocalCopy="0"/>
   </MODULES>
@@ -229,18 +229,18 @@
                        headerPath="" libraryPath="" userNotes=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="extras/builds/Linux-Static" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
@@ -254,18 +254,18 @@
                        headerPath="" linuxArchitecture="" userNotes=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <LINUX_MAKE targetFolder="builds/Linux" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
@@ -279,18 +279,18 @@
                        linuxArchitecture=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <VS2012 targetFolder="extras/builds/VisualStudio2012-32" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__"
@@ -308,18 +308,18 @@
                        headerPath="../../../extras/sdks/fftw/fftw-32"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </VS2012>
     <VS2012 targetFolder="extras/builds/VisualStudio2012-64" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__&#10;"
@@ -336,18 +336,18 @@
                        postbuildCommand="..\..\..\src\post-build-win-64.bat" userNotes=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </VS2012>
     <XCODE_IPHONE targetFolder="extras/builds/iOS" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__IOS_CORE__&#10;__KISS_FFT__"
@@ -361,18 +361,18 @@
                        targetName="ISSE" cppLibType="libc++"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="JuceLibraryCode/modules"/>
-        <MODULEPATH id="juce_graphics" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </XCODE_IPHONE>
   </EXPORTFORMATS>
