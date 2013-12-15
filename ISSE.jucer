@@ -268,31 +268,6 @@
         <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
-    <LINUX_MAKE targetFolder="builds/Linux-Static" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
-                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/"
-                extraLinkerFlags="-lpthread&#10;-lgomp&#10;/usr/lib64/libfftw3f.a&#10;"
-                smallIcon="qYkELb" bigIcon="qYkELb" userNotes="">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
-                       headerPath="" linuxArchitecture="" userNotes=""/>
-        <CONFIGURATION name="Release" libraryPath="" isDebug="0" optimisation="3" targetName="ISSE"
-                       headerPath="" linuxArchitecture="" userNotes=""/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
-      </MODULEPATHS>
-    </LINUX_MAKE>
     <VS2012 targetFolder="extras/builds/VisualStudio2012-32" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__"
             extraCompilerFlags="-I../../../sdks/eigen/&#10;-openmp" externalLibraries="libfftw3-3.lib&#10;libfftw3f-3.lib&#10;"
             smallIcon="qYkELb" bigIcon="qYkELb" userNotes="" toolset="v110_xp"
