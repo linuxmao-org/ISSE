@@ -243,15 +243,15 @@
         <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <LINUX_MAKE targetFolder="extras/builds/Linux-Static" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
-                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../../sdks/eigen/"
-                extraLinkerFlags="-lpthread&#10;-lgomp&#10;/usr/lib64/libfftw3f.a&#10;"
-                smallIcon="qYkELb" bigIcon="qYkELb" userNotes="">
+    <LINUX_MAKE targetFolder="builds/Linux" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
+                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/&#10;"
+                extraLinkerFlags="-lpthread&#10;-lfftw3f&#10;-lgomp" smallIcon="qYkELb"
+                bigIcon="qYkELb">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
-                       headerPath="" linuxArchitecture="" userNotes=""/>
+                       linuxArchitecture=""/>
         <CONFIGURATION name="Release" libraryPath="" isDebug="0" optimisation="3" targetName="ISSE"
-                       headerPath="" linuxArchitecture="" userNotes=""/>
+                       linuxArchitecture=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
@@ -268,15 +268,15 @@
         <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
-    <LINUX_MAKE targetFolder="builds/Linux" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
-                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/&#10;"
-                extraLinkerFlags="-lpthread&#10;-lfftw3f&#10;-lgomp" smallIcon="qYkELb"
-                bigIcon="qYkELb">
+    <LINUX_MAKE targetFolder="builds/Linux-Static" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
+                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/"
+                extraLinkerFlags="-lpthread&#10;-lgomp&#10;/usr/lib64/libfftw3f.a&#10;"
+                smallIcon="qYkELb" bigIcon="qYkELb" userNotes="">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
-                       linuxArchitecture=""/>
+                       headerPath="" linuxArchitecture="" userNotes=""/>
         <CONFIGURATION name="Release" libraryPath="" isDebug="0" optimisation="3" targetName="ISSE"
-                       linuxArchitecture=""/>
+                       headerPath="" linuxArchitecture="" userNotes=""/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
