@@ -6,4 +6,4 @@
 	url = git://github.com/RLovelett/eigen.git
 [submodule "extras"]
 	path = extras
-	url = ssh://isseapp@git.code.sf.net/p/isse/extra-code
+	url = git://git.code.sf.net/p/isse/extra-code
