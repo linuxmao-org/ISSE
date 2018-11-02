@@ -1,18 +1,18 @@
 /*
   ==============================================================================
 
-  This is an automatically generated GUI class created by the Introjucer!
+  This is an automatically generated GUI class created by the Projucer!
 
   Be careful when adding custom code to these files, as only the code within
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Introjucer version: 3.1.0
+  Created with Projucer version: 5.3.2
 
   ------------------------------------------------------------------------------
 
-  The Introjucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright 2004-13 by Raw Material Software Ltd.
+  The Projucer is part of the JUCE library.
+  Copyright (c) 2017 - ROLI Ltd.
 
   ==============================================================================
 */
@@ -30,61 +30,97 @@
 //==============================================================================
 NewComponent::NewComponent ()
 {
-    addAndMakeVisible (textEditor = new TextEditor ("new text editor"));
+    //[Constructor_pre] You can add your own custom stuff here..
+    //[/Constructor_pre]
+
+    textEditor.reset (new TextEditor ("new text editor"));
+    addAndMakeVisible (textEditor.get());
     textEditor->setMultiLine (false);
     textEditor->setReturnKeyStartsNewLine (false);
     textEditor->setReadOnly (false);
     textEditor->setScrollbarsShown (true);
     textEditor->setCaretVisible (true);
     textEditor->setPopupMenuEnabled (true);
-    textEditor->setText ("Project Name");
+    textEditor->setText (TRANS("Project Name"));
 
-    addAndMakeVisible (browseButton = new TextButton ("browseButton"));
-    browseButton->setButtonText ("Browse");
+    textEditor->setBounds (8, 8, 440, 24);
+
+    browseButton.reset (new TextButton ("browseButton"));
+    addAndMakeVisible (browseButton.get());
+    browseButton->setButtonText (TRANS("Browse"));
     browseButton->addListener (this);
 
-    addAndMakeVisible (groupComponent = new GroupComponent ("new group",
-                                                            "Separation Options"));
+    browseButton->setBounds (464, 8, 134, 24);
+
+    groupComponent.reset (new GroupComponent ("new group",
+                                              TRANS("Separation Options")));
+    addAndMakeVisible (groupComponent.get());
     groupComponent->setColour (GroupComponent::textColourId, Colours::white);
 
-    addAndMakeVisible (groupComponent2 = new GroupComponent ("new group",
-                                                             "Input Channel Options"));
+    groupComponent->setBounds (296, 40, 272, 160);
+
+    groupComponent2.reset (new GroupComponent ("new group",
+                                               TRANS("Input Channel Options")));
+    addAndMakeVisible (groupComponent2.get());
     groupComponent2->setColour (GroupComponent::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton = new ToggleButton ("new toggle button"));
-    toggleButton->setButtonText ("Speech + Background");
+    groupComponent2->setBounds (8, 40, 272, 160);
+
+    toggleButton.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton.get());
+    toggleButton->setButtonText (TRANS("Speech + Background"));
     toggleButton->addListener (this);
     toggleButton->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton2 = new ToggleButton ("new toggle button"));
-    toggleButton2->setButtonText ("Music (2 Sources)");
+    toggleButton->setBounds (312, 112, 208, 24);
+
+    toggleButton2.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton2.get());
+    toggleButton2->setButtonText (TRANS("Music (2 Sources)"));
     toggleButton2->addListener (this);
     toggleButton2->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton3 = new ToggleButton ("new toggle button"));
-    toggleButton3->setButtonText ("Polyphonic Music (88 Keys)");
+    toggleButton2->setBounds (312, 64, 150, 24);
+
+    toggleButton3.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton3.get());
+    toggleButton3->setButtonText (TRANS("Polyphonic Music (88 Keys)"));
     toggleButton3->addListener (this);
     toggleButton3->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton4 = new ToggleButton ("new toggle button"));
-    toggleButton4->setButtonText ("Right");
+    toggleButton3->setBounds (312, 160, 200, 24);
+
+    toggleButton4.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton4.get());
+    toggleButton4->setButtonText (TRANS("Right"));
     toggleButton4->addListener (this);
     toggleButton4->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton5 = new ToggleButton ("new toggle button"));
-    toggleButton5->setButtonText ("Left");
+    toggleButton4->setBounds (24, 96, 150, 24);
+
+    toggleButton5.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton5.get());
+    toggleButton5->setButtonText (TRANS("Left"));
     toggleButton5->addListener (this);
     toggleButton5->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton6 = new ToggleButton ("new toggle button"));
-    toggleButton6->setButtonText ("Mono (L + R)");
+    toggleButton5->setBounds (24, 64, 150, 24);
+
+    toggleButton6.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton6.get());
+    toggleButton6->setButtonText (TRANS("Mono (L + R)"));
     toggleButton6->addListener (this);
     toggleButton6->setColour (ToggleButton::textColourId, Colours::white);
 
-    addAndMakeVisible (toggleButton7 = new ToggleButton ("new toggle button"));
-    toggleButton7->setButtonText ("Stereo");
+    toggleButton6->setBounds (24, 128, 200, 24);
+
+    toggleButton7.reset (new ToggleButton ("new toggle button"));
+    addAndMakeVisible (toggleButton7.get());
+    toggleButton7->setButtonText (TRANS("Stereo"));
     toggleButton7->addListener (this);
     toggleButton7->setColour (ToggleButton::textColourId, Colours::white);
+
+    toggleButton7->setBounds (24, 160, 200, 24);
 
 
     //[UserPreSize]
@@ -133,17 +169,9 @@ void NewComponent::paint (Graphics& g)
 
 void NewComponent::resized()
 {
-    textEditor->setBounds (8, 8, 440, 24);
-    browseButton->setBounds (464, 8, 134, 24);
-    groupComponent->setBounds (296, 40, 272, 160);
-    groupComponent2->setBounds (8, 40, 272, 160);
-    toggleButton->setBounds (312, 112, 208, 24);
-    toggleButton2->setBounds (312, 64, 150, 24);
-    toggleButton3->setBounds (312, 160, 200, 24);
-    toggleButton4->setBounds (24, 96, 150, 24);
-    toggleButton5->setBounds (24, 64, 150, 24);
-    toggleButton6->setBounds (24, 128, 200, 24);
-    toggleButton7->setBounds (24, 160, 200, 24);
+    //[UserPreResize] Add your own custom resize code here..
+    //[/UserPreResize]
+
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -153,42 +181,42 @@ void NewComponent::buttonClicked (Button* buttonThatWasClicked)
     //[UserbuttonClicked_Pre]
     //[/UserbuttonClicked_Pre]
 
-    if (buttonThatWasClicked == browseButton)
+    if (buttonThatWasClicked == browseButton.get())
     {
         //[UserButtonCode_browseButton] -- add your button handler code here..
         //[/UserButtonCode_browseButton]
     }
-    else if (buttonThatWasClicked == toggleButton)
+    else if (buttonThatWasClicked == toggleButton.get())
     {
         //[UserButtonCode_toggleButton] -- add your button handler code here..
         //[/UserButtonCode_toggleButton]
     }
-    else if (buttonThatWasClicked == toggleButton2)
+    else if (buttonThatWasClicked == toggleButton2.get())
     {
         //[UserButtonCode_toggleButton2] -- add your button handler code here..
         //[/UserButtonCode_toggleButton2]
     }
-    else if (buttonThatWasClicked == toggleButton3)
+    else if (buttonThatWasClicked == toggleButton3.get())
     {
         //[UserButtonCode_toggleButton3] -- add your button handler code here..
         //[/UserButtonCode_toggleButton3]
     }
-    else if (buttonThatWasClicked == toggleButton4)
+    else if (buttonThatWasClicked == toggleButton4.get())
     {
         //[UserButtonCode_toggleButton4] -- add your button handler code here..
         //[/UserButtonCode_toggleButton4]
     }
-    else if (buttonThatWasClicked == toggleButton5)
+    else if (buttonThatWasClicked == toggleButton5.get())
     {
         //[UserButtonCode_toggleButton5] -- add your button handler code here..
         //[/UserButtonCode_toggleButton5]
     }
-    else if (buttonThatWasClicked == toggleButton6)
+    else if (buttonThatWasClicked == toggleButton6.get())
     {
         //[UserButtonCode_toggleButton6] -- add your button handler code here..
         //[/UserButtonCode_toggleButton6]
     }
-    else if (buttonThatWasClicked == toggleButton7)
+    else if (buttonThatWasClicked == toggleButton7.get())
     {
         //[UserButtonCode_toggleButton7] -- add your button handler code here..
         //[/UserButtonCode_toggleButton7]
@@ -206,16 +234,16 @@ void NewComponent::buttonClicked (Button* buttonThatWasClicked)
 
 //==============================================================================
 #if 0
-/*  -- Introjucer information section --
+/*  -- Projucer information section --
 
-    This is where the Introjucer stores the metadata that describe this GUI layout, so
+    This is where the Projucer stores the metadata that describe this GUI layout, so
     make changes in here at your peril!
 
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="NewComponent" componentName=""
                  parentClasses="public Component" constructorParams="" variableInitialisers=""
-                 snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330000013"
+                 snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
                  fixedSize="0" initialWidth="600" initialHeight="400">
   <BACKGROUND backgroundColour="ff404040"/>
   <TEXTEDITOR name="new text editor" id="b9ac916389d94a06" memberName="textEditor"

@@ -56,7 +56,7 @@ inline Matrix zerophasewin( const Matrix & m, int N );
 //!=============================================================================
 
     // Forward reference
-    namespace internal {
+    namespace Internal {
        
         
         inline bool isTrivial(unsigned long N)
@@ -72,7 +72,7 @@ inline Matrix zerophasewin( const Matrix & m, int N );
 inline Matrix hann( unsigned long N, bool periodic )
 {
     Matrix window(N,1);
-    if(internal::isTrivial(N))
+    if(Internal::isTrivial(N))
     {
         window.setOnes();
         return window;
@@ -104,7 +104,7 @@ inline Matrix hann( unsigned long N, bool periodic )
 inline Matrix hamming( unsigned long N, bool periodic )
 {
     Matrix window(N, 1);    
-    if(internal::isTrivial(N))
+    if(Internal::isTrivial(N))
     {
         window.setOnes();
         return window;

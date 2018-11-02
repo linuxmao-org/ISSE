@@ -139,7 +139,7 @@ bool PluginThread::loadFromXML( const XmlElement & xml, const File & assetsFolde
     }
     
     
-    File pluginFile(assetsFolder.getFullPathName().toUTF8() + "/plugin.settings");
+    File pluginFile(assetsFolder.getFullPathName() + "/plugin.settings");
     
 //    std::cout << pluginFile.getFullPathName() << std::endl;
     

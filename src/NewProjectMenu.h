@@ -1,24 +1,23 @@
 /*
   ==============================================================================
 
-  This is an automatically generated GUI class created by the Introjucer!
+  This is an automatically generated GUI class created by the Projucer!
 
   Be careful when adding custom code to these files, as only the code within
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Introjucer version: 3.1.0
+  Created with Projucer version: 5.3.2
 
   ------------------------------------------------------------------------------
 
-  The Introjucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright 2004-13 by Raw Material Software Ltd.
+  The Projucer is part of the JUCE library.
+  Copyright (c) 2017 - ROLI Ltd.
 
   ==============================================================================
 */
 
-#ifndef __JUCE_HEADER_5E53D049AFEB23AF__
-#define __JUCE_HEADER_5E53D049AFEB23AF__
+#pragma once
 
 //[Headers]     -- You can add your own extra header files here --
 // Authors: Nicholas J. Bryan
@@ -36,7 +35,7 @@
                                                                     //[/Comments]
 */
 class NewComponent  : public Component,
-                      public ButtonListener
+                      public Button::Listener
 {
 public:
     //==============================================================================
@@ -47,9 +46,9 @@ public:
     //[UserMethods]     -- You can add your own custom methods in this section.
     //[/UserMethods]
 
-    void paint (Graphics& g);
-    void resized();
-    void buttonClicked (Button* buttonThatWasClicked);
+    void paint (Graphics& g) override;
+    void resized() override;
+    void buttonClicked (Button* buttonThatWasClicked) override;
 
 
 
@@ -58,17 +57,17 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    ScopedPointer<TextEditor> textEditor;
-    ScopedPointer<TextButton> browseButton;
-    ScopedPointer<GroupComponent> groupComponent;
-    ScopedPointer<GroupComponent> groupComponent2;
-    ScopedPointer<ToggleButton> toggleButton;
-    ScopedPointer<ToggleButton> toggleButton2;
-    ScopedPointer<ToggleButton> toggleButton3;
-    ScopedPointer<ToggleButton> toggleButton4;
-    ScopedPointer<ToggleButton> toggleButton5;
-    ScopedPointer<ToggleButton> toggleButton6;
-    ScopedPointer<ToggleButton> toggleButton7;
+    std::unique_ptr<TextEditor> textEditor;
+    std::unique_ptr<TextButton> browseButton;
+    std::unique_ptr<GroupComponent> groupComponent;
+    std::unique_ptr<GroupComponent> groupComponent2;
+    std::unique_ptr<ToggleButton> toggleButton;
+    std::unique_ptr<ToggleButton> toggleButton2;
+    std::unique_ptr<ToggleButton> toggleButton3;
+    std::unique_ptr<ToggleButton> toggleButton4;
+    std::unique_ptr<ToggleButton> toggleButton5;
+    std::unique_ptr<ToggleButton> toggleButton6;
+    std::unique_ptr<ToggleButton> toggleButton7;
 
 
     //==============================================================================
@@ -77,5 +76,3 @@ private:
 
 //[EndFile] You can add extra defines here...
 //[/EndFile]
-
-#endif   // __JUCE_HEADER_5E53D049AFEB23AF__

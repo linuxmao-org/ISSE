@@ -21,7 +21,6 @@
  
 FileAudioSink::FileAudioSink( const File & file_, double sampleRateToUse, size_t numChannels_, size_t maxSamples_ ) :
     tempFile(file_),
-    fwriter(NULL),
     foutput(NULL),
 sampleRate(sampleRateToUse),
 numChannels(numChannels_),

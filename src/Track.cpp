@@ -73,9 +73,6 @@ Track::Track(int trackNum_)  :
     stopMarker(1.0),
     currentLengthInSeconds(0),
     gainMult(1),
-    yScrollBar(NULL),
-    plusButton(NULL),
-    minusButton(NULL),
     xrange(0.f,30.f)
 {
     

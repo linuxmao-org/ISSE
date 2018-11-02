@@ -39,7 +39,7 @@
  
  
 class BrushPanel  : public Component,
-                    public SliderListener,
+                    public Slider::Listener,
                     public Button::Listener
 {
 public:
@@ -51,10 +51,10 @@ public:
     float getBrushHeight();
  
 
-    void paint (Graphics& g);
-    void resized();
-    void sliderValueChanged (Slider* sliderThatWasMoved);
-    virtual void 	buttonClicked (Button *);
+    void paint (Graphics& g) override;
+    void resized() override;
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
+    virtual void 	buttonClicked (Button *) override;
 
 private:
  

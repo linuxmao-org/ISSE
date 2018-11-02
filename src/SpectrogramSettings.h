@@ -1,23 +1,23 @@
 /*
- Copyright 2013 Adobe Systems Incorporated
- Distributed under the terms of the Gnu General Public License
- 
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation.
- 
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- 
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-// Authors: Nicholas J. Bryan
+  ==============================================================================
 
-#ifndef __JUCE_HEADER_2254AF9A550C4DE0__
-#define __JUCE_HEADER_2254AF9A550C4DE0__
+  This is an automatically generated GUI class created by the Projucer!
+
+  Be careful when adding custom code to these files, as only the code within
+  the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
+  and re-saved.
+
+  Created with Projucer version: 5.3.2
+
+  ------------------------------------------------------------------------------
+
+  The Projucer is part of the JUCE library.
+  Copyright (c) 2017 - ROLI Ltd.
+
+  ==============================================================================
+*/
+
+#pragma once
 
 //[Headers]     -- You can add your own extra header files here --
 #include "JuceHeader.h"
@@ -36,8 +36,8 @@
                                                                     //[/Comments]
 */
 class SpectrogramSettings  : public Component,
-                             public SliderListener,
-                             public ComboBoxListener
+                             public Slider::Listener,
+                             public ComboBox::Listener
 {
 public:
     class Listener
@@ -47,8 +47,6 @@ public:
         virtual ~Listener(){}
     };
 
-    
-public:
     //==============================================================================
     SpectrogramSettings (SpectrogramSettings::Listener * listener_, ProgramSettings & settings_);
     ~SpectrogramSettings();
@@ -58,26 +56,26 @@ public:
     static void openSettingsAsModalDialog( SpectrogramSettings::Listener * listener, ProgramSettings & settings);
     //[/UserMethods]
 
-    void paint (Graphics& g);
-    void resized();
-    void sliderValueChanged (Slider* sliderThatWasMoved);
-    void comboBoxChanged (ComboBox* comboBoxThatHasChanged);
+    void paint (Graphics& g) override;
+    void resized() override;
+    void sliderValueChanged (Slider* sliderThatWasMoved) override;
+    void comboBoxChanged (ComboBox* comboBoxThatHasChanged) override;
 
 
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
     SpectrogramSettings::Listener * listener;
-
+    ProgramSettings & settings;
     //[/UserVariables]
 
     //==============================================================================
-    ScopedPointer<Slider> clipSlider;
-    ScopedPointer<Label> label;
-    ScopedPointer<ComboBox> colorMapComboBox;
-    ScopedPointer<Label> label2;
-    ScopedPointer<ComboBox> processComboBox;
-    ScopedPointer<Label> label3;
+    std::unique_ptr<Slider> clipSlider;
+    std::unique_ptr<Label> label;
+    std::unique_ptr<ComboBox> colorMapComboBox;
+    std::unique_ptr<Label> label2;
+    std::unique_ptr<ComboBox> processComboBox;
+    std::unique_ptr<Label> label3;
 
 
     //==============================================================================
@@ -86,5 +84,3 @@ private:
 
 //[EndFile] You can add extra defines here...
 //[/EndFile]
-
-#endif   // __JUCE_HEADER_2254AF9A550C4DE0__

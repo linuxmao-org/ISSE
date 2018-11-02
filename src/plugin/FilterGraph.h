@@ -87,10 +87,12 @@ public:
 
     void removeIllegalConnections();
 
-    void setNodePosition (const int nodeId, double x, double y);
-    void getNodePosition (const int nodeId, double& x, double& y) const;
+    void setNodePosition (const int nodeID, double x, double y);
+    void getNodePosition (const int nodeID, double& x, double& y) const;
 
     //==============================================================================
+    std::vector<AudioProcessorGraph::Connection> getConnections() const;
+/*
     int getNumConnections() const noexcept;
     const AudioProcessorGraph::Connection* getConnection (const int index) const noexcept;
 
@@ -98,6 +100,7 @@ public:
                                                                  int sourceFilterChannel,
                                                                  uint32 destFilterUID,
                                                                  int destFilterChannel) const noexcept;
+*/
 
     bool canConnect (uint32 sourceFilterUID, int sourceFilterChannel,
                      uint32 destFilterUID, int destFilterChannel) const noexcept;
@@ -105,10 +108,15 @@ public:
     bool addConnection (uint32 sourceFilterUID, int sourceFilterChannel,
                         uint32 destFilterUID, int destFilterChannel);
 
+/*
     void removeConnection (const int index);
+*/
 
     void removeConnection (uint32 sourceFilterUID, int sourceFilterChannel,
                            uint32 destFilterUID, int destFilterChannel);
+
+    bool isConnected (uint32 sourceFilterUID, int sourceFilterChannel,
+                      uint32 destFilterUID, int destFilterChannel) const noexcept;
 
     void clear();
     

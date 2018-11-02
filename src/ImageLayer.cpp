@@ -21,7 +21,7 @@
  
 
 ImageLayer::ImageLayer(int trackNum_ )
-:  image ( new Image(Image::RGB, 100, 100, true)), trackNum(trackNum_), vizRenderThread(NULL), dirty(false)
+:  image ( new Image(Image::RGB, 100, 100, true)), trackNum(trackNum_), dirty(false)
 {
     setVisible(true);
 

@@ -53,10 +53,10 @@ PluginWindow::PluginWindow (Component* const uiComp,
     activePluginWindows.add (this);
 }
 
-void PluginWindow::closeCurrentlyOpenWindowsFor (const uint32 nodeId)
+void PluginWindow::closeCurrentlyOpenWindowsFor (const uint32 nodeID)
 {
     for (int i = activePluginWindows.size(); --i >= 0;)
-        if (activePluginWindows.getUnchecked(i)->owner->nodeId == nodeId)
+        if (activePluginWindows.getUnchecked(i)->owner->nodeID == nodeID)
             delete activePluginWindows.getUnchecked(i);
 }
 
@@ -767,10 +767,10 @@ ConnectorComponent* GraphEditorPanel::getComponentForConnection (const AudioProc
         ConnectorComponent* const c = dynamic_cast <ConnectorComponent*> (getChildComponent (i));
 
         if (c != nullptr
-             && c->sourceFilterID == conn.sourceNodeId
-             && c->destFilterID == conn.destNodeId
-             && c->sourceFilterChannel == conn.sourceChannelIndex
-             && c->destFilterChannel == conn.destChannelIndex)
+             && c->sourceFilterID == conn.source.nodeID
+             && c->destFilterID == conn.destination.nodeID
+             && c->sourceFilterChannel == conn.source.channelIndex
+             && c->destFilterChannel == conn.destination.channelIndex)
         {
             return c;
         }
@@ -826,10 +826,11 @@ void GraphEditorPanel::updateComponents()
 
         if (cc != nullptr && cc != draggingConnector)
         {
-            if (graph.getConnectionBetween (cc->sourceFilterID, cc->sourceFilterChannel,
-                                            cc->destFilterID, cc->destFilterChannel) == nullptr)
+            if (graph.isConnected (cc->sourceFilterID, cc->sourceFilterChannel,
+                                   cc->destFilterID, cc->destFilterChannel))
             {
-                delete cc;
+                graph.removeConnection (cc->sourceFilterID, cc->sourceFilterChannel,
+                                        cc->destFilterID, cc->destFilterChannel);
             }
             else
             {
@@ -842,25 +843,26 @@ void GraphEditorPanel::updateComponents()
     {
         const AudioProcessorGraph::Node::Ptr f (graph.getNode (i));
 
-        if (getComponentForFilter (f->nodeId) == 0)
+        if (getComponentForFilter (f->nodeID) == 0)
         {
-            FilterComponent* const comp = new FilterComponent (graph, f->nodeId);
+            FilterComponent* const comp = new FilterComponent (graph, f->nodeID);
             addAndMakeVisible (comp);
             comp->update();
         }
     }
 
-    for (i = graph.getNumConnections(); --i >= 0;)
+    std::vector<AudioProcessorGraph::Connection> connections;
+    for (i = connections.size(); --i >= 0;)
     {
-        const AudioProcessorGraph::Connection* const c = graph.getConnection (i);
+        const AudioProcessorGraph::Connection& c = connections[i];
 
-        if (getComponentForConnection (*c) == 0)
+        if (getComponentForConnection (c) == 0)
         {
             ConnectorComponent* const comp = new ConnectorComponent (graph);
             addAndMakeVisible (comp);
 
-            comp->setInput (c->sourceNodeId, c->sourceChannelIndex);
-            comp->setOutput (c->destNodeId, c->destChannelIndex);
+            comp->setInput (c.source.nodeID, c.source.channelIndex);
+            comp->setOutput (c.destination.nodeID, c.destination.channelIndex);
         }
     }
 }
@@ -1042,8 +1044,8 @@ GraphDocumentComponent::GraphDocumentComponent (AudioPluginFormatManager& format
     const AudioProcessorGraph::Node::Ptr s = graph.getNode (0) ;
     const AudioProcessorGraph::Node::Ptr d = graph.getNode (1) ;
     
-    const bool result1 = graph.addConnection (s->nodeId, 0, d->nodeId, 0);
-    const bool result2 = graph.addConnection (s->nodeId, 1, d->nodeId, 1);
+    const bool result1 = graph.addConnection (s->nodeID, 0, d->nodeID, 0);
+    const bool result2 = graph.addConnection (s->nodeID, 1, d->nodeID, 1);
     
     if (result1 || result2)
         graph.changed();
