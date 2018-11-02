@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="XJHdcg" name="ISSE" projectType="guiapp" version="0.2.0"
               bundleIdentifier="edu.stanford.ccrma" jucerVersion="5.3.2" defines=""
-              includeBinaryInAppConfig="1">
+              includeBinaryInAppConfig="1" cppLanguageStandard="11">
   <MAINGROUP id="Rq24qA" name="ISSE">
     <GROUP id="{ECFC0A27-437A-C3C4-008C-C8826F5E2DA5}" name="Source">
       <GROUP id="{3E894A75-E950-5051-A474-9E7CAEAE0833}" name="Separation Core">
@@ -242,9 +242,8 @@
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="builds/Linux" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__UNIX__"
-                extraCompilerFlags="-msse&#10;-msse2&#10;-std=c++0x&#10;-fopenmp&#10;-I../../sdks/eigen/&#10;"
-                extraLinkerFlags="-lpthread&#10;-lfftw3f&#10;-lgomp" smallIcon="qYkELb"
-                bigIcon="qYkELb">
+                extraCompilerFlags="-msse&#10;-msse2&#10;-fopenmp&#10;-I../../sdks/eigen/&#10;"
+                extraLinkerFlags="-fopenmp&#10;-lfftw3f" smallIcon="qYkELb" bigIcon="qYkELb">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" libraryPath="" isDebug="1" optimisation="1" targetName="ISSE"
                        linuxArchitecture=""/>
@@ -265,34 +264,6 @@
         <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
-    <VS2012 targetFolder="extras/builds/VisualStudio2012-64" extraDefs="__SEPARATION_FLOAT_PRECISION__&#10;__WINDOWS__&#10;"
-            extraCompilerFlags="-I../../../sdks/eigen/&#10;-openmp" externalLibraries="libfftw3-3.lib&#10;libfftw3f-3.lib&#10;"
-            smallIcon="qYkELb" bigIcon="qYkELb" toolset="v110_xp" userNotes="">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug-64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="1" optimisation="1" targetName="ISSE" headerPath="../../../extras/SDKs/fftw/fftw-64&#10;"
-                       libraryPath="../../../extras/SDKs/fftw/fftw-64&#10;" wholeProgramOptimisation="1"
-                       postbuildCommand="..\..\..\src\post-build-win-64.bat" userNotes=""/>
-        <CONFIGURATION name="Release-64" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
-                       isDebug="0" optimisation="3" targetName="ISSE" headerPath="../../../extras/SDKs/fftw/fftw-64&#10;"
-                       libraryPath="../../../extras/SDKs/fftw/fftw-64&#10;" wholeProgramOptimisation="1"
-                       postbuildCommand="..\..\..\src\post-build-win-64.bat" userNotes=""/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_gui_audio" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_graphics" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_events" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_core" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="sdks/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="sdks/juce/modules"/>
-      </MODULEPATHS>
-    </VS2012>
     <XCODE_IPHONE targetFolder="extras/builds/iOS" extraDefs="JUCE_PLUGINHOST_AU&#10;__SEPARATION_FLOAT_PRECISION__&#10;__IOS_CORE__&#10;__KISS_FFT__"
                   extraCompilerFlags="-fopenmp&#10;-I../../../SDKs/eigen/" extraLinkerFlags="-lpthread&#10;-headerpad_max_install_names&#10;/usr/local/lib/libfftw3f.a"
                   smallIcon="qYkELb" bigIcon="qYkELb" UIStatusBarHidden="1" UIFileSharingEnabled="1"
@@ -336,7 +307,7 @@
       </MODULEPATHS>
     </VS2017>
   </EXPORTFORMATS>
-  <JUCEOPTIONS/>
+  <JUCEOPTIONS JUCE_WEB_BROWSER="0" JUCE_USE_CURL="0"/>
   <LIVE_SETTINGS>
     <LINUX/>
   </LIVE_SETTINGS>
