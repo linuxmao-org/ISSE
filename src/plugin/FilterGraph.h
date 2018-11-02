@@ -26,6 +26,8 @@
 #ifndef __JUCE_FILTERGRAPH_JUCEHEADER__
 #define __JUCE_FILTERGRAPH_JUCEHEADER__
 
+#include "JuceHeader.h"
+
 class FilterInGraph;
 class FilterGraph;
 
@@ -70,6 +72,8 @@ public:
     FilterGraph (AudioPluginFormatManager& formatManager);
     
     ~FilterGraph();
+
+    typedef AudioProcessorGraph::NodeID NodeID;
 
     //==============================================================================
     AudioProcessorGraph& getGraph() noexcept         { return graph; }

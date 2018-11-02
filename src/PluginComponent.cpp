@@ -250,7 +250,7 @@ void PluginComponent::constructGUI()
     addAndMakeVisible (programsComboBox = new ComboBox (L"programs combo box"));
     programsComboBox->setEditableText (false);
     programsComboBox->setJustificationType (Justification::centredLeft);
-    programsComboBox->setTextWhenNothingSelected (String::empty);
+    programsComboBox->setTextWhenNothingSelected (String());
     programsComboBox->setTextWhenNoChoicesAvailable (L"(no choices)");
     programsComboBox->addListener (this);
 

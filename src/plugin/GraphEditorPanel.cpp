@@ -56,7 +56,7 @@ PluginWindow::PluginWindow (Component* const uiComp,
 void PluginWindow::closeCurrentlyOpenWindowsFor (const uint32 nodeID)
 {
     for (int i = activePluginWindows.size(); --i >= 0;)
-        if (activePluginWindows.getUnchecked(i)->owner->nodeID == nodeID)
+        if (activePluginWindows.getUnchecked(i)->owner->nodeID.uid == nodeID)
             delete activePluginWindows.getUnchecked(i);
 }
 
@@ -767,8 +767,8 @@ ConnectorComponent* GraphEditorPanel::getComponentForConnection (const AudioProc
         ConnectorComponent* const c = dynamic_cast <ConnectorComponent*> (getChildComponent (i));
 
         if (c != nullptr
-             && c->sourceFilterID == conn.source.nodeID
-             && c->destFilterID == conn.destination.nodeID
+             && c->sourceFilterID == conn.source.nodeID.uid
+             && c->destFilterID == conn.destination.nodeID.uid
              && c->sourceFilterChannel == conn.source.channelIndex
              && c->destFilterChannel == conn.destination.channelIndex)
         {
@@ -843,9 +843,9 @@ void GraphEditorPanel::updateComponents()
     {
         const AudioProcessorGraph::Node::Ptr f (graph.getNode (i));
 
-        if (getComponentForFilter (f->nodeID) == 0)
+        if (getComponentForFilter (f->nodeID.uid) == 0)
         {
-            FilterComponent* const comp = new FilterComponent (graph, f->nodeID);
+            FilterComponent* const comp = new FilterComponent (graph, f->nodeID.uid);
             addAndMakeVisible (comp);
             comp->update();
         }
@@ -861,8 +861,8 @@ void GraphEditorPanel::updateComponents()
             ConnectorComponent* const comp = new ConnectorComponent (graph);
             addAndMakeVisible (comp);
 
-            comp->setInput (c.source.nodeID, c.source.channelIndex);
-            comp->setOutput (c.destination.nodeID, c.destination.channelIndex);
+            comp->setInput (c.source.nodeID.uid, c.source.channelIndex);
+            comp->setOutput (c.destination.nodeID.uid, c.destination.channelIndex);
         }
     }
 }
@@ -891,7 +891,7 @@ void GraphEditorPanel::dragConnector (const MouseEvent& e)
 
     if (draggingConnector != nullptr)
     {
-        draggingConnector->setTooltip (String::empty);
+        draggingConnector->setTooltip (String());
 
         int x = e2.x;
         int y = e2.y;
@@ -937,7 +937,7 @@ void GraphEditorPanel::endDraggingConnector (const MouseEvent& e)
     if (draggingConnector == nullptr)
         return;
 
-    draggingConnector->setTooltip (String::empty);
+    draggingConnector->setTooltip (String());
 
     const MouseEvent e2 (e.getEventRelativeTo (this));
 
@@ -1036,7 +1036,7 @@ GraphDocumentComponent::GraphDocumentComponent (AudioPluginFormatManager& format
     addAndMakeVisible (statusBar = new TooltipBar());
 
     deviceManager->addAudioCallback (&graphPlayer);
-    deviceManager->addMidiInputCallback (String::empty, &graphPlayer.getMidiMessageCollector());
+    deviceManager->addMidiInputCallback (String(), &graphPlayer.getMidiMessageCollector());
 
     graphPanel->updateComponents();
     
@@ -1044,8 +1044,8 @@ GraphDocumentComponent::GraphDocumentComponent (AudioPluginFormatManager& format
     const AudioProcessorGraph::Node::Ptr s = graph.getNode (0) ;
     const AudioProcessorGraph::Node::Ptr d = graph.getNode (1) ;
     
-    const bool result1 = graph.addConnection (s->nodeID, 0, d->nodeID, 0);
-    const bool result2 = graph.addConnection (s->nodeID, 1, d->nodeID, 1);
+    const bool result1 = graph.addConnection (s->nodeID.uid, 0, d->nodeID.uid, 0);
+    const bool result2 = graph.addConnection (s->nodeID.uid, 1, d->nodeID.uid, 1);
     
     if (result1 || result2)
         graph.changed();
@@ -1057,7 +1057,7 @@ GraphDocumentComponent::GraphDocumentComponent (AudioPluginFormatManager& format
 GraphDocumentComponent::~GraphDocumentComponent()
 {
     deviceManager->removeAudioCallback (&graphPlayer);
-    deviceManager->removeMidiInputCallback (String::empty,
+    deviceManager->removeMidiInputCallback (String(),
                                             &graphPlayer.getMidiMessageCollector());
 
     deleteAllChildren();

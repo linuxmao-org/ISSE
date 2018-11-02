@@ -188,7 +188,7 @@ bool ISSEngine::save( std::string filepath )
     xml.setAttribute("HOPSIZE", (int)stftparams.hopsize);
     
     
-    return  xml.writeToFile (f, String::empty);
+    return  xml.writeToFile (f, String());
 
 }
 
