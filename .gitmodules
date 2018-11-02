@@ -6,4 +6,4 @@
 	url = git://github.com/RLovelett/eigen.git
 [submodule "extras"]
 	path = extras
-	url = git://git.code.sf.net/p/isse/extra-code
+	url = https://github.com/linuxmao-org/ISSE-extras.git
